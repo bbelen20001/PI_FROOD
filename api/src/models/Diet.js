@@ -5,20 +5,15 @@ module.exports = (sequelize) => {
     "Diet",
     {
       id: {
-        type: DataTypes.UUID,
+        type: DataTypes.INTEGER,
+        autoIncrement: true,
         primaryKey: true,
-        defaultValue: DataTypes.UUIDV4,
-        unique: true,
       },
-      dietName: {
+      name: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
         unique: true,
       },
-      createdInDb: {
-        type: DataTypes.BOOLEAN,
-        defaultValue: true
-      }
     },
     { timestamps: false }
   );

@@ -4,57 +4,40 @@ const { DataTypes } = require("sequelize");
 module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define(
-    "recipe",
+    "Recipe",
     {
-      name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        unique: true,
-      },
       id: {
         type: DataTypes.UUID,
         primaryKey: true,
         defaultValue: DataTypes.UUIDV4,
-        unique: true,
-      },
-      description: {
         allowNull: false,
-        type: DataTypes.STRING,
-        unique: true,
-        validate: {
-          len: [10, 150],
-        },
       },
-      imageUrl: {
+       title: {
+        type: DataTypes.STRING,
         allowNull: false,
-        type: DataTypes.STRING,
-        validate: {
-          len: [10, 120],
-        },
-        unique: true,
       },
-
-      salud: {
+      healthScore: {
+        type: DataTypes.STRING,
+      
+      },
+    
+      image: {
+        type: DataTypes.STRING,
+        allowNull: true,
+        defaultValue: "https://media.istockphoto.com/id/1217629948/es/vector/icono-de-l%C3%ADnea-de-color-del-libro-culinario-una-referencia-de-cocina-que-contiene-recetas.jpg?s=612x612&w=0&k=20&c=X1-sFxMvCs1nUcG491puAbl9KKXq7I0FegLNERYoDMg="
+      },
+      summary:{
+        type : DataTypes.TEXT,    
+        allowNull: false
+      },
+      analyzedInstructions:{
+        type : DataTypes.TEXT,
+      },
+      createdInDb:{                                  // esta propiedad la van a tener solo las comidas que esten en la BD
+        type : DataTypes.BOOLEAN,                    // por lo que es mas facil buscarlas 
         allowNull: false,
-        type: DataTypes.INTEGER,
-        validate: {
-          min: 10,
-          max: 100,
-          isNumeric: true,
-        },
-      },
-      steps: {
-        type: DataTypes.STRING,
-        type: DataTypes.ARRAY(DataTypes.STRING),
-      },
-      ingredientsLis: {
-        allowNull: false,
-        type: DataTypes.STRING,
-      },
-      createdInDb: {
-        type: DataTypes.BOOLEAN,
-        defaultValue: true,
-      },
+        defaultValue: true
+      }
     },
     { timestamps: false }
   );
