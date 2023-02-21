@@ -3,7 +3,7 @@ import style from "./NavBar.module.css"
 const NavBar = ()=>{
     return(
         <div className={style.mainContainer}>
-        <Link to= "/recipes">Recipes</Link>
+        <Link to= "/home">Home</Link>
         <Link to= "/create">Form</Link>
         </div>
     )

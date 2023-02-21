@@ -1,4 +1,4 @@
-import {Recipes,Detail,Landing,Form} from "./views"
+import {Home,Detail,Landing,Form} from "./views"
 import { Route, useLocation } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 
@@ -10,7 +10,7 @@ function App() {
      <Route exact path="/"  component={Landing}/>
      <Route exact path="/detail"  component={Detail}/>
      <Route exact path="/create"  component={Form}/>
-    <Route path="/Recipes" render={()=> <Recipes />} />
+    <Route path="/recipes" render={()=> <Home/>} />
   
     </div>
   );

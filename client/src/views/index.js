@@ -1,7 +1,7 @@
 import Detail from "./Detail/Detail";
 import Form from "./Form/Form";
-import Recipes from "./Recipes/Recipes";
+import Home from "./home/Home";
 import Landing from "./Landing/Landing";
 
 
-export {Detail, Form, Recipes,Landing}
+export {Detail, Form, Home,Landing}

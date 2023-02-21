@@ -42,3 +42,9 @@ module.exports = (sequelize) => {
     { timestamps: false }
   );
 };
+/* Receta con las siguientes propiedades:
+ID: *
+Nombre *
+Resumen del plato *
+Nivel de "comida saludable" (health score)
+Paso a paso */
