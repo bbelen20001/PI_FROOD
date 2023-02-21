@@ -10,7 +10,7 @@ function App() {
      <Route exact path="/"  component={Landing}/>
      <Route exact path="/detail"  component={Detail}/>
      <Route exact path="/create"  component={Form}/>
-    <Route path="/recipes" render={()=> <Home/>} />
+    <Route path="/home" render={()=> <Home/>} />
   
     </div>
   );

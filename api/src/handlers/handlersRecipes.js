@@ -27,23 +27,23 @@ const searchRecipes = async (req, res) => {
   }
 };
 //---------------------------------
-const recipeId = async (req, res) => {
-  //Para el detalle por id
+// const recipeId = async (req, res) => {
+//   //Para el detalle por id
 
-  try {
-    const id = req.params.id
-   const source = await getAllRecipes ();
-    const recipe = source.find (element=> element.id == id );
-    if(recipe){
-      res.status(200).json(recipe);
-    }else{
-      res.status(404).json({ error:"Recipe not found"});
-    }
+//   try {
+//     const id = req.params.id
+//    const source = await getAllRecipes ();
+//     const recipe = source.find (element=> element.id == id );
+//     if(recipe){
+//       res.status(200).json(recipe);
+//     }else{
+//       res.status(404).json({ error:"Recipe not found"});
+//     }
     
-  } catch (error) {
-    res.status(404).json({ error: error.message });
-    }
-  };
+//   } catch (error) {
+//     res.status(404).json({ error: error.message });
+//     }
+//   };
 
   const createRecipes = async (req,res)=>{
     try{
@@ -91,7 +91,6 @@ const recipeId = async (req, res) => {
 
 module.exports = {
   searchRecipes,
-  recipeId,
   createRecipes,
   searchOne
 };

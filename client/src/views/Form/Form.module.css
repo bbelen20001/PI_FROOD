@@ -1,0 +1,124 @@
+.containerForm{
+   
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    display: grid;
+    grid-template-columns: 10% 90%;
+  }
+  
+  .btnRetroceder {
+    position: absolute;
+
+    min-height: 64px;
+    min-width: 64px;
+    background-repeat: no-repeat;
+    left: 30px;
+    top: 80px;
+  }
+  @media (min-width: 1200px) {
+    .titulo {
+      margin-bottom: 4px;
+      margin-top: 6em;
+      margin-left: 7px;
+      font-family: Kavoon;
+      font-size: 30px;
+      color: rgb(14, 193, 14);
+      -webkit-text-stroke: 0.5px black;
+    }
+  }
+  
+  .form {
+    display: grid;
+    margin-left: 30px;
+  }
+  
+  .info {
+    display: grid;
+  }
+  .label {
+    font-size: 20px;
+    font-family: lobster;
+    margin-top: 15px;
+  }
+  
+  .contForm {
+    display: grid;
+    justify-content: flex-start;
+    align-items: center;
+    /* background-color: rgba(250, 235, 215, 0.367); */
+  }
+  
+  /* Para validar inputs que tenga algo*/
+  .failed {
+    border: 1px solid red;
+    width: 500px;
+    height: 20px;
+    font-size: 12px;
+    font-family: Kavoon;
+  }
+  
+  .great {
+    border: 1px solid green;
+    width: 500px;
+    height: 20px;
+    font-size: 12px;
+    font-family: Kavoon;
+  }
+  
+  .failedArea {
+    border: 1px solid red;
+    width: 500px;
+    height: 70px;
+    resize: none;
+    font-size: 12px;
+    font-family: Kavoon;
+  }
+  
+  .greatArea {
+    border: 1px solid green;
+    width: 500px;
+    height: 70px;
+    resize: none;
+    font-size: 12px;
+    font-family: Kavoon;
+  }
+  
+  .healthScore {
+    color: rgb(5, 198, 5);
+    font-family: Kavoon;
+  }
+ 
+  .checkBoxFather {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    /* grid-template-rows: ; */
+  }
+  .checkBox {
+    display: flex;
+    flex-direction: row;
+    font-family: Righteous;
+  }
+  
+  .btnForm {
+    margin-top: 1.2em;
+    height: 50px;
+    font-size: 30px;
+    font-family: lobster;
+    background-color: green;
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    margin-bottom: 5em;
+  }
+  .btnForm:hover {
+    background-color: rgb(2, 182, 2);
+  }
+  .btnForm:active {
+    background-color: rgb(68, 209, 68);
+  }
+  
+  /******************************************************************************************    */
+  

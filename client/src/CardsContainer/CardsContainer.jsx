@@ -15,6 +15,7 @@ const CardsContainer = ()=>{
             title={recipes.title}
             healthScore={recipes.healthScore}
             dietTypes={recipes.dietTypes}
+            key = {recipes.id}
             />
          })}
         </div>
